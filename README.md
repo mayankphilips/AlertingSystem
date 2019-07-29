@@ -1,9 +1,7 @@
 # Alerting System
 
 ## Details: This is an alerting system that will generate patient details and compare the values with the standard values. If the values defer from standard values then it will raise an alert.
-## The values for the patient deatils are generated randomly. The values are passed to the vital check module to check whether the values generated are valid or not.
-### Deatails: This is an alerting system that will generate patient details and compare the values with the standard values. If the values defer from standard values then it will raise an alert.
-### The values for the patient deatils are generated randomly. The values are passed to the vital check module to check whether the values generated are valid or not.
+The values for the patient deatils are generated randomly. The values are passed to the vital check module to check whether the values generated are valid or not.
 
 vitalCheck Class
 The vital check class has 3 functions which take body vitals data as an input and returns if any vital has gone out of the standard range.
