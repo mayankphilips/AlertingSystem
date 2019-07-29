@@ -1,2 +1,0 @@
-var patient = [{"patient id": "TRJIW432", "SPO2": 96, "pulse rate": 75, "temperature": 98.6},
-				{"patient id": "TRJIW433", "SPO2": 95, "pulse rate": 70, "temperature": 97 }];
