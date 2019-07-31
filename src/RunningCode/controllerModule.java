@@ -1,6 +1,7 @@
 package RunningCode;
 
 import java.awt.event.KeyEvent;
+import java.util.Scanner;
 
 class Sample {
 	public String patientId;
@@ -36,9 +37,42 @@ public class controllerModule {
 		
 		}
 	}*/
-
-
+	
 	static {
+		Scanner in = new Scanner(System.in);        
+	    String n;
+	    do
+	    {
+	    	n = in.nextLine();
+	    	main(new String[] { "Hello" }); 
+	        System.out.println("********************************************");
+	        try {
+				Thread.sleep(1000); // 1000 milliseconds
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+	    	
+	    }while(!n.equalsIgnoreCase("q"));
+	}
+	
+
+	/*static {
+		while(!System.in) 
+		{
+	        main(new String[] { "Hello" }); 
+	        System.out.println("********************************************");
+	        try {
+				Thread.sleep(1000); // 1000 milliseconds
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+		}
+	    }	
+		
+	}*/
+
+
+
+	/*static {
 		for(int i=0;i<100;i++) 
 		{
 	        main(new String[] { "Hello" }); 
@@ -50,7 +84,7 @@ public class controllerModule {
 		}
 	    }	
 		
-	}
+	}*/
 	public static void main(String[] args) {
 
 		InputGeneratingModule ig = new InputGeneratingModule();	
