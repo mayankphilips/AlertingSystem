@@ -1,7 +1,5 @@
 package RunningCode;
 
-import java.awt.event.KeyEvent;
-import java.util.Scanner;
 
 class Sample {
 	public String patientId;
@@ -20,71 +18,20 @@ class Sample {
 }
 
 public class controllerModule {
-	
-	/*static{
 
-		int key= KeyEvent.getKeyCode();
-
-        if((((key>=65)&&(key<=90))||((key>=97)&&(key<=122))||((key>=48)&&(key<=57))))
-        {
-			main(new String[] { "Hello" }); 
-	        System.out.println("********************************************");
-	        try {
-				Thread.sleep(10000); // 1000 milliseconds
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-        }
-		
-		}
-	}*/
-	
 	static {
-		Scanner in = new Scanner(System.in);        
-	    String n;
-	    do
-	    {
-	    	n = in.nextLine();
-	    	main(new String[] { "Hello" }); 
+		for(int i=0;i<10;i++) 
+		{
+	        main(new String[] { "Hello" }); 
 	        System.out.println("********************************************");
 	        try {
-				Thread.sleep(1000); // 1000 milliseconds
+				Thread.sleep(5000); // 1000 milliseconds
 			} catch (InterruptedException e) {
 				e.printStackTrace();
-			}
-	    	
-	    }while(!n.equalsIgnoreCase("q"));
+		}
+	    }	
+		
 	}
-	
-
-	/*static {
-		while(!System.in) 
-		{
-	        main(new String[] { "Hello" }); 
-	        System.out.println("********************************************");
-	        try {
-				Thread.sleep(1000); // 1000 milliseconds
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-		}
-	    }	
-		
-	}*/
-
-
-
-	/*static {
-		for(int i=0;i<100;i++) 
-		{
-	        main(new String[] { "Hello" }); 
-	        System.out.println("********************************************");
-	        try {
-				Thread.sleep(1000); // 1000 milliseconds
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-		}
-	    }	
-		
-	}*/
 	public static void main(String[] args) {
 
 		InputGeneratingModule ig = new InputGeneratingModule();	
@@ -126,5 +73,4 @@ public class controllerModule {
 			System.out.println("NOT A VALID INPUT!!!!");		
 
 	}
-
 }
