@@ -1,4 +1,4 @@
-package RunningCode;
+package sourceCode;
 
 public class Sample {
 
@@ -7,9 +7,9 @@ public class Sample {
 	public String pulseRate;
 	public String temperature;
 	
-	Sample(String patientId,String Spo2,String pulseRate,String temperature){
+	Sample(String patientId,String spo2,String pulseRate,String temperature){
 		this.patientId = patientId;
-		this.oxygenLevel = Spo2;
+		this.oxygenLevel = spo2;
 		this.pulseRate = pulseRate;
 		this.temperature = temperature;
 		

@@ -1,11 +1,11 @@
-package RunningCode;
+package sourceCode;
 
 public class ValidatingModule  {
 	
-	public boolean validatedetails(Sample[] sample) {
+	public boolean validateDetails(Sample[] sample) {
 		
 	String patientId = null;	
-	String Spo2 = null;
+	String spo2 = null;
 	String pulserate = null;
 	String temp = null;
     boolean flag = false;
@@ -15,34 +15,34 @@ public class ValidatingModule  {
 		
 	{
 		     patientId= sample[i].patientId;
-		     Spo2 = sample[i].oxygenLevel;
+		     spo2 = sample[i].oxygenLevel;
 		     pulserate = sample[i].pulseRate;
 		     temp = sample[i].temperature;		
 		
 	}
-	int SPO2=Integer.parseInt(Spo2); 
+	int spo2_=Integer.parseInt(spo2); 
 	int pulseRate = Integer.parseInt(pulserate);
 	double temperature = Double.parseDouble(temp);
 		
 	if(patientId == null){
 		flag = true;
 		System.out.println("INVALID PATIENTID");}
-	else if(Checkparams(SPO2)==true){
+	else if(checkParams(spo2_)==true){
 		flag=true;
 	    System.out.println("INVALID OXYGEN LEVELS");}
-	else if(Checkparams(pulseRate)==true){
+	else if(checkParams(pulseRate)==true){
 		flag=true;
 		System.out.println("INVALID HEART RATE");}
-	else if(Checkparams(temperature)==true){
+	else if(checkParams(temperature)==true){
 		flag=true;
 		System.out.println("INVALID TEMPERATURE");}
-	else if(CheckSPO2(SPO2) == false){
+	else if(checkSPO2(spo2_) == false){
 		flag=true;
 		System.out.println("OXYGEN LEVEL IS OUT OF RANGE");}
-	else if(CheckPulseRate(pulseRate)==false){
+	else if(checkPulseRate(pulseRate)==false){
 		flag=true;
 		System.out.println("PULSERATE IS OUT OF RANGE");}
-	else if(CheckTemp(temperature) == false){
+	else if(checkTemp(temperature) == false){
 		flag=true;
 		System.out.println("TEMPERATURE IS OUT OF RANGE");}
 	else
@@ -56,7 +56,7 @@ public class ValidatingModule  {
 	
 	
 	// Method1
-    public static boolean Checkparams(double x)
+    public static boolean checkParams(double x)
     {		
 		if(x<=0) 
 			return true;		
@@ -65,9 +65,9 @@ public class ValidatingModule  {
 	}
     
     //Method 2
-    public static boolean CheckSPO2(double SPO2)
+    public static boolean checkSPO2(double spo2)
     {
-    	if(SPO2>=70 && SPO2<=100)
+    	if(spo2>=70 && spo2<=100)
     		return true;
     	else
     		return false;
@@ -76,7 +76,7 @@ public class ValidatingModule  {
     
     
   //Method 3
-    public static boolean CheckTemp(double temperature)
+    public static boolean checkTemp(double temperature)
     {
     	if(temperature>=93 && temperature<=113)
     		return true;
@@ -86,7 +86,7 @@ public class ValidatingModule  {
     }
     
     //Method 4
-    public static boolean CheckPulseRate(int pulseRate) 
+    public static boolean checkPulseRate(int pulseRate) 
     {
 		if(pulseRate>=30 && pulseRate<=254)
 			return true;

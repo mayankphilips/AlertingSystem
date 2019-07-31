@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import RunningCode.VitalCheckModule;
+import sourceCode.VitalCheckModule;
 
 public class TestTemprature {
 	VitalCheckModule test = new VitalCheckModule();

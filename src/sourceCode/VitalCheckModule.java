@@ -1,6 +1,6 @@
 //This will check for the Vitals of patients and will  alert accordingly
 
-package RunningCode;
+package sourceCode;
 public class VitalCheckModule {
 	
 	public boolean paramsCheck(Sample[] sample) {
@@ -49,31 +49,31 @@ public class VitalCheckModule {
 		
 		if( pulseRate >=50 && pulseRate <= 100 ) { 
 			
-			return pulseRateNormalLimit; //Normal Status and no alarm needs to be raised
+			return pulseRateNormalLimit; 
 			
 		}
 		
 		
 		
 		else if( pulseRate >=40 && pulseRate < 50 ){
-			return lowPulseRateWarningLimit; //Alarming Drop and Attention Needed
+			return lowPulseRateWarningLimit; 
 			
 		}
 		
 		
 		else if( pulseRate >=30 && pulseRate < 40) {
-			return lowPulseRateCriticalLimit; //Critical Level Drop in pulserate , Immediate Response Required / Alert Doctor
+			return lowPulseRateCriticalLimit; 
 			
 		}
 		
 		else if( pulseRate >100 && pulseRate < 120 ){
-			return highPulseRateWarningLimit; //Alarming Drop and Attention Needed
+			return highPulseRateWarningLimit; 
 			
 		}
 		
 		
 		else if( pulseRate >=120 && pulseRate < 254) {
-			return highPulseRateCriticalLimit; //Critical Level Drop in pulserate , Immediate Response Required / Alert Doctor
+			return highPulseRateCriticalLimit; 
 			
 		}
 		
@@ -82,7 +82,7 @@ public class VitalCheckModule {
 		{
 			return pulseRateMachineError;
 		}	
-			//Machine is Malfunctioning , Alert Nursing Station for Immediate Check
+			
 		
 	}
 	
@@ -98,31 +98,31 @@ public class VitalCheckModule {
 		
 		if( tempratureF >=97.0 && tempratureF <= 99.00 ) { 
 			
-			return tempratureNormalLimit; //Normal Status and no alarm needs to be raised
+			return tempratureNormalLimit; 
 			
 		}
 		
 		
 		
 		else if( tempratureF >=95.00 && tempratureF < 97.00 ){
-			return lowTempratureWarningLimit; //Alarming Drop and Attention Needed
+			return lowTempratureWarningLimit; 
 			
 		}
 		
 		
 		else if( tempratureF >=93.00 && tempratureF < 95.00) {
-			return lowTempratureCriticalLimit; //Critical Level Drop in temperature , Immediate Response Required / Alert Doctor
+			return lowTempratureCriticalLimit; 
 			
 		}
 		
 		else if( tempratureF >99.00 && tempratureF < 104.00 ){
-			return highTempratureWarningLimit; //Alarming Drop and Attention Needed
+			return highTempratureWarningLimit; 
 			
 		}
 		
 		
 		else if( tempratureF >=104.00 && tempratureF < 108.00) {
-			return highTempratureCriticalLimit; //Critical Level increase in temperature , Immediate Response Required / Alert Doctor
+			return highTempratureCriticalLimit; 
 			
 		}
 		
@@ -145,20 +145,20 @@ public class VitalCheckModule {
 		
 		if( oxygenConcentration >=91 && oxygenConcentration <= 100 ) { 
 			
-			return oxygenNormalLimit; //Normal Status and no alarm needs to be raised
+			return oxygenNormalLimit; 
 			
 		}
 		
 		
 		
 		else if( oxygenConcentration >=81 && oxygenConcentration < 91 ){
-			return oxygenWarningLimit; //Alarming Drop and Attention Needed
+			return oxygenWarningLimit; 
 			
 		}
 		
 		
 		else if( oxygenConcentration >=70 && oxygenConcentration < 81) {
-			return oxygenCriticalLimit; //Critical Level Drop in oxygen level, Immediate Response Required / Alert Doctor
+			return oxygenCriticalLimit; 
 			
 		}
 		
@@ -167,7 +167,7 @@ public class VitalCheckModule {
 		{
 			return oxygenMachineError;
 		}	
-			//Machine is Malfunctioning , Alert Nursing Station for Immediate Check
+			
 		
 	}
 

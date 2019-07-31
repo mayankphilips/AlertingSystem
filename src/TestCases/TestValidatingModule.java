@@ -1,7 +1,7 @@
 package TestCases;
 
 
-import RunningCode.ValidatingModule;
+import sourceCode.ValidatingModule;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
@@ -11,32 +11,32 @@ public class TestValidatingModule {
 	@Test
 	public void testCheckparams() 
 	{
-		assertEquals(true,ValidatingModule.Checkparams(-1)); 
-		assertEquals(true,ValidatingModule.Checkparams(0)); 
-		assertEquals(false,ValidatingModule.Checkparams(1)); 		
+		assertEquals(true,ValidatingModule.checkParams(-1)); 
+		assertEquals(true,ValidatingModule.checkParams(0)); 
+		assertEquals(false,ValidatingModule.checkParams(1)); 		
 	}
 	
 	@Test
 	public void testCheckSPO2() 
 	{
-		assertEquals(false,ValidatingModule.CheckSPO2(69));
-		assertEquals(true,ValidatingModule.CheckSPO2(70));
-		assertEquals(true,ValidatingModule.CheckSPO2(71));
-		assertEquals(true,ValidatingModule.CheckSPO2(99));
-		assertEquals(true,ValidatingModule.CheckSPO2(100));
-		assertEquals(false,ValidatingModule.CheckSPO2(101));
+		assertEquals(false,ValidatingModule.checkSPO2(69));
+		assertEquals(true,ValidatingModule.checkSPO2(70));
+		assertEquals(true,ValidatingModule.checkSPO2(71));
+		assertEquals(true,ValidatingModule.checkSPO2(99));
+		assertEquals(true,ValidatingModule.checkSPO2(100));
+		assertEquals(false,ValidatingModule.checkSPO2(101));
 		
 	}
 	
 	@Test
 	public void testCheckTemp()
 	{
-		assertEquals(false,ValidatingModule.CheckTemp(92));
-		assertEquals(true,ValidatingModule.CheckTemp(93));
-		assertEquals(true,ValidatingModule.CheckTemp(94));
-		assertEquals(true,ValidatingModule.CheckTemp(112));
-		assertEquals(true,ValidatingModule.CheckTemp(113));
-		assertEquals(false,ValidatingModule.CheckTemp(114));
+		assertEquals(false,ValidatingModule.checkTemp(92));
+		assertEquals(true,ValidatingModule.checkTemp(93));
+		assertEquals(true,ValidatingModule.checkTemp(94));
+		assertEquals(true,ValidatingModule.checkTemp(112));
+		assertEquals(true,ValidatingModule.checkTemp(113));
+		assertEquals(false,ValidatingModule.checkTemp(114));
 		
 	}
 	
@@ -44,12 +44,12 @@ public class TestValidatingModule {
 	@Test
 	public void testCheckPulseRate() 
 	{
-		assertEquals(false,ValidatingModule.CheckPulseRate(29));
-		assertEquals(true,ValidatingModule.CheckPulseRate(30));
-		assertEquals(true,ValidatingModule.CheckPulseRate(31));
-		assertEquals(true,ValidatingModule.CheckPulseRate(253));
-		assertEquals(true,ValidatingModule.CheckPulseRate(254));
-		assertEquals(false,ValidatingModule.CheckPulseRate(255));
+		assertEquals(false,ValidatingModule.checkPulseRate(29));
+		assertEquals(true,ValidatingModule.checkPulseRate(30));
+		assertEquals(true,ValidatingModule.checkPulseRate(31));
+		assertEquals(true,ValidatingModule.checkPulseRate(253));
+		assertEquals(true,ValidatingModule.checkPulseRate(254));
+		assertEquals(false,ValidatingModule.checkPulseRate(255));
 		
 	}
 	

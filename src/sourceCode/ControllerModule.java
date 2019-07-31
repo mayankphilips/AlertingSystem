@@ -1,23 +1,26 @@
-package RunningCode;
+package sourceCode;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class ControllerModule implements Runnable {
+	
 	static BufferedReader in ;  
 	static int quit=0;
     static PatientIdGeneratingModule p= new PatientIdGeneratingModule();
 	public static String patientId= p.getAlphaNumericString();
 	
-	public void run(){
+	public void run()
+	{
         String msg = null;
-        while(true){
+        while(true)
+        {
             try{
             msg=in.readLine();
             }catch(Exception e){}
              
             if(msg.equalsIgnoreCase("Q")) {quit=1;break;}}
-        }
+     }
 	
 	
 	public static void controllerFunction() {
@@ -40,7 +43,7 @@ public class ControllerModule implements Runnable {
 			System.out.println("Temperature = "+sample[i].temperature);			
 		}
 					
-		if(vm.validatedetails(sample)) 
+		if(vm.validateDetails(sample)) 
 			    ar.alertingFunc(1);	
 		else 
 		{
@@ -59,13 +62,15 @@ public class ControllerModule implements Runnable {
 	
 	
 	public static void main(String args[]) throws Exception{
-	    in=new BufferedReader(new InputStreamReader(System.in));
+	    
+		    in=new BufferedReader(new InputStreamReader(System.in));
 	         
 	        Thread t=new Thread(new ControllerModule());
 	        t.start();
 	         
 	        System.out.println("PRESS Q THEN ENTER to terminate");
-	        while(true){
+	        while(true)
+	        {
 	            if(quit==1) break;
 	            controllerFunction();
 	            System.out.println("********************************************");

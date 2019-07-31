@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import RunningCode.VitalCheckModule;
+import sourceCode.VitalCheckModule;
 
 public class TestOxygenConcentration {
 	VitalCheckModule test = new VitalCheckModule();

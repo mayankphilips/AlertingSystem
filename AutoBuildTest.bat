@@ -1,9 +1,9 @@
 @ECHO OFF
 
 cd src
-call javac -classpath ./../libs/* RunningCode/*.java
-call javac -classpath ./../libs/*;./RunningCode/*;./*; TestCases/*.java
-call java -classpath ./../libs/*;./RunningCode/*;./*; TestCases.TestCasesRunner
-call java RunningCode.controllerModule
+call javac -classpath ./../libs/* sourceCode/*.java
+call javac -classpath ./../libs/*;./sourceCode/*;./*; TestCases/*.java
+call java -classpath ./../libs/*;./sourceCode/*;./*; TestCases.TestCasesRunner
+call java sourceCode.ControllerModule
 cd ..
 
