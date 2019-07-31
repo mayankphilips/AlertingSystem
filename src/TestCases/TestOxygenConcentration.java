@@ -1,9 +1,9 @@
-package TestCases;
+package src.TestCases;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import RunningCode.VitalCheckModule;
+import src.RunningCode.VitalCheckModule;
 
 public class TestOxygenConcentration {
 	VitalCheckModule test = new VitalCheckModule();

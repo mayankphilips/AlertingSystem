@@ -1,6 +1,6 @@
 //This will check for the Vitals of patients and will  alert accordingly
 
-package RunningCode;
+package src.RunningCode;
 public class VitalCheckModule {
 	
 	public boolean paramsCheck(Sample[] sample) {

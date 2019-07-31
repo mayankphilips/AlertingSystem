@@ -1,4 +1,4 @@
-package RunningCode;
+package src.RunningCode;
 
 
 import java.util.Random;

@@ -1,4 +1,4 @@
-package RunningCode;
+package src.RunningCode;
 
 
 public class InputGeneratingModule{

@@ -1,4 +1,4 @@
-package RunningCode;
+package src.RunningCode;
 
 class Sample{
 	public String patientId;

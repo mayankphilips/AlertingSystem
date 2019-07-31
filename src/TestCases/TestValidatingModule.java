@@ -1,7 +1,7 @@
-package TestCases;
+package src.TestCases;
 
 
-import RunningCode.ValidatingModule;
+import src.RunningCode.ValidatingModule;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;

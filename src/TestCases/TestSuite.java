@@ -1,4 +1,4 @@
-package TestCases;
+package src.TestCases;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
