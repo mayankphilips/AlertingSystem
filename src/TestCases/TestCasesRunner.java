@@ -11,8 +11,9 @@ public class TestCasesRunner {
 		for (Failure failure : result.getFailures()) {
 	         System.out.println(failure.toString());
 	      }
-	      System.out.println("Result=="+result.wasSuccessful());
-	      System.out.println("All TestCases passed");
+	      System.out.println("RESULT=="+result.wasSuccessful());
+		  System.out.println("All TEST CASES PASSED");
+		  System.out.println("**************************************");
 
 	}
 }

@@ -3,15 +3,11 @@ package RunningCode;
 
 
 public class InputGeneratingModule {
-    	public Sample[] getDetails()
+    	public Sample[] getDetails(String patientId)
     	{
 			Sample[] arr;
     		arr = new Sample[1];
     		
-    		/*PatientIdGeneratingModule p= new PatientIdGeneratingModule();
-    		String patientId=p.getAlphaNumericString();*/
-    		String patientId="TRJIW432";
-			
 			RandomValuesGeneratingModule r= new RandomValuesGeneratingModule();
     		int spo2=(int)r.generateFun(50, 100);
     		int hr=(int)r.generateFun(30, 254);
