@@ -1,20 +1,21 @@
 package src.RunningCode;
 
 
-public class InputGeneratingModule{
 
-    	public Sample[] getDetails()
+public class InputGeneratingModule {
+    	public Sample[] getDetails(String patientId)
     	{
-    		Sample[] arr;
+			Sample[] arr;
     		arr = new Sample[1];
     		
-    		PatientIdGeneratingModule p= new PatientIdGeneratingModule();
-    		String patientId=p.getAlphaNumericString();
-    		
-    		RandomValuesGeneratingModule r= new RandomValuesGeneratingModule();
+			RandomValuesGeneratingModule r= new RandomValuesGeneratingModule();
     		int spo2=(int)r.generateFun(50, 100);
     		int hr=(int)r.generateFun(30, 254);
-        	double temp= Math.round(r.generateFun(80, 130) * 100.0) /100.0;
+			double temp= Math.round(r.generateFun(80, 130) * 100.0) /100.0;
+			
+			/*int spo2=(int)r.generateFun(88, 100);
+    		int hr=(int)r.generateFun(48, 110);
+        	double temp= Math.round(r.generateFun(95, 102) * 100.0) /100.0;*/
         	
         	String Spo2 = Integer.toString(spo2);
         	String pulseRate = Integer.toString(hr);
@@ -24,8 +25,11 @@ public class InputGeneratingModule{
 			     return arr;
         	else       	
         		return null;			
-    		
-    	}
+			}
+		
+
+
     
 	
+
 }

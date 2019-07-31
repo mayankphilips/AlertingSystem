@@ -13,7 +13,7 @@ public class VitalCheckModule {
 		for(int i=0;i<1;i++) {
 			pr = sample[i].pulseRate;
 			tc = sample[i].temperature;
-			oc = sample[i].Spo2;			
+			oc = sample[i].oxygenLevel;			
 		}
 		int oc_=Integer.parseInt(oc); 
 		int pr_ = Integer.parseInt(pr);
@@ -22,6 +22,15 @@ public class VitalCheckModule {
 		result1 = pulseRateCheck(pr_);
 		result2 = temperatureCheck(tc_);
 		result3 = oxygenCheck(oc_);
+		if(result1==1)
+			System.out.println("CRITICAL PULSE RATE!!!!");
+		
+		if(result2==1)
+			System.out.println("CRITICAL TEMPERTAURE!!!!");
+		
+		if(result3==1)
+			System.out.println("CRITICAL OXYGEN LEVELS!!!!");
+		
 		if(result1==1 || result2==1 || result3==1)
 			return true;
 		else
@@ -47,35 +56,32 @@ public class VitalCheckModule {
 		
 		
 		else if( pulseRate >=40 && pulseRate < 50 ){
-			
 			return lowPulseRateWarningLimit; //Alarming Drop and Attention Needed
 			
 		}
 		
 		
 		else if( pulseRate >=30 && pulseRate < 40) {
-			
-			return lowPulseRateCriticalLimit; //Critical Level Drop in SPO2 , Immediate Response Required / Alert Doctor
+			return lowPulseRateCriticalLimit; //Critical Level Drop in pulserate , Immediate Response Required / Alert Doctor
 			
 		}
 		
 		else if( pulseRate >100 && pulseRate < 120 ){
-			
 			return highPulseRateWarningLimit; //Alarming Drop and Attention Needed
 			
 		}
 		
 		
 		else if( pulseRate >=120 && pulseRate < 254) {
-			
-			return highPulseRateCriticalLimit; //Critical Level Drop in SPO2 , Immediate Response Required / Alert Doctor
+			return highPulseRateCriticalLimit; //Critical Level Drop in pulserate , Immediate Response Required / Alert Doctor
 			
 		}
 		
 		
 		else
+		{
 			return pulseRateMachineError;
-			
+		}	
 			//Machine is Malfunctioning , Alert Nursing Station for Immediate Check
 		
 	}
@@ -99,35 +105,32 @@ public class VitalCheckModule {
 		
 		
 		else if( tempratureF >=95.00 && tempratureF < 97.00 ){
-			
 			return lowTempratureWarningLimit; //Alarming Drop and Attention Needed
 			
 		}
 		
 		
 		else if( tempratureF >=93.00 && tempratureF < 95.00) {
-			
-			return lowTempratureCriticalLimit; //Critical Level Drop in SPO2 , Immediate Response Required / Alert Doctor
+			return lowTempratureCriticalLimit; //Critical Level Drop in temperature , Immediate Response Required / Alert Doctor
 			
 		}
 		
 		else if( tempratureF >99.00 && tempratureF < 104.00 ){
-			
 			return highTempratureWarningLimit; //Alarming Drop and Attention Needed
 			
 		}
 		
 		
 		else if( tempratureF >=104.00 && tempratureF < 108.00) {
-			
-			return highTempratureCriticalLimit; //Critical Level Drop in SPO2 , Immediate Response Required / Alert Doctor
+			return highTempratureCriticalLimit; //Critical Level increase in temperature , Immediate Response Required / Alert Doctor
 			
 		}
 		
 		
 		else
+		   {
 			return tempratureMachineError;
-			
+		   }
 		
 		
 	}
@@ -149,22 +152,21 @@ public class VitalCheckModule {
 		
 		
 		else if( oxygenConcentration >=81 && oxygenConcentration < 91 ){
-			
 			return oxygenWarningLimit; //Alarming Drop and Attention Needed
 			
 		}
 		
 		
 		else if( oxygenConcentration >=70 && oxygenConcentration < 81) {
-			
-			return oxygenCriticalLimit; //Critical Level Drop in SPO2 , Immediate Response Required / Alert Doctor
+			return oxygenCriticalLimit; //Critical Level Drop in oxygen level, Immediate Response Required / Alert Doctor
 			
 		}
 		
 		
 		else
+		{
 			return oxygenMachineError;
-			
+		}	
 			//Machine is Malfunctioning , Alert Nursing Station for Immediate Check
 		
 	}
