@@ -13,5 +13,6 @@ public class TestCasesRunner {
 	      }
 		  System.out.println("Result=="+result.wasSuccessful());
 		  System.out.println("All TestCases Passed");
+
 	}
 }
