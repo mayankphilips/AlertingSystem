@@ -2,8 +2,8 @@
 
 cd src
 call javac -classpath ./../libs/* sourceCode/*.java
-call javac -classpath ./../libs/*;./sourceCode/*;./*; TestCases/*.java
-call java -classpath ./../libs/*;./sourceCode/*;./*; TestCases.TestCasesRunner
+call javac -classpath ./../libs/*;./sourceCode/*;./*; testCases/*.java
+call java -classpath ./../libs/*;./sourceCode/*;./*; testCases.TestCasesRunner
 call java sourceCode.ControllerModule
 cd ..
 
