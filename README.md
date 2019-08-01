@@ -1,7 +1,14 @@
 # Alerting System
 
-## Details: This is an alerting system that will generate patient details and compare the values with the standard values. If the values defer from standard values then it will raise an alert.
-The values for the patient deatils are generated randomly. The values are passed to the vital check module to check whether the values generated are valid or not.
+## Details: The user of this tool is a nurse in the ICU. The patient’s vital signs are sensed and formatted into a JSON-string by a patient-monitoring device. The formatted data keeps arriving periodically. When a parameter goes out-of-range, an alert is given on the console-output.
+
+As in the real time scenario we don't have patient monitoring system, the project is modified such that it creates random patient data and evaluates it against standard values. If any of the parameter goes out of range then an alert is given.
+
+ControllerModule Class
+void controllerFunction : It takes input from input generating module and sends it to validate module. If any of the values are invalid then it gives notification in console. Then it sends patient data to vitalcheck module to check for the out of range values and give alert.
+
+Inputgenerating class
+getDetails: It will create random patient data by using a random generating function and pass it to Controller module.
 
 vitalCheck Class
 The vital check class has 3 functions which take body vitals data as an input and returns if any vital has gone out of the standard range.
