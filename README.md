@@ -4,10 +4,10 @@
 
 As in the real time scenario we don't have patient monitoring system, the project is modified such that it creates random patient data and evaluates it against standard values. If any of the parameter goes out of range then an alert is given.
 
-ControllerModule Class
+ControllerModule Class -
 void controllerFunction : It takes input from input generating module and sends it to validate module. If any of the values are invalid then it gives notification in console. Then it sends patient data to vitalcheck module to check for the out of range values and give alert.
 
-Inputgenerating class
+Inputgenerating class -
 getDetails: It will create random patient data by using a random generating function and pass it to Controller module.
 
 vitalCheck Class
