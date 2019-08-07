@@ -30,29 +30,29 @@ public class ControllerModule implements Runnable {
 		ValidatingModule vm = new ValidatingModule();
 		VitalCheckModule vc = new VitalCheckModule();
 
-		Sample[] sample = ig.getDetails(patientId);
+		PatientVitals[] sample = ig.getDetails(patientId);
 		
 		if(sample !=null) 
 		{
 		
-		for(int i=0;i<1;i++)
-		{
-			System.out.println("PatientId = " +sample[i].patientId);
-			System.out.println("OxygenLevel = "+sample[i].oxygenLevel);
-			System.out.println("PulseRate = "+sample[i].pulseRate);
-			System.out.println("Temperature = "+sample[i].temperature);			
-		}
+		    for(int i=0;i<sample.length;i++)
+		    {
+			     System.out.println("PatientId = " +sample[i].patientId);
+			     System.out.println("OxygenLevel = "+sample[i].oxygenLevel);
+			     System.out.println("PulseRate = "+sample[i].pulseRate);
+			     System.out.println("Temperature = "+sample[i].temperature);			
+		    }
 					
-		if(vm.validateDetails(sample)) 
-			    ar.alertingFunc(1);	
-		else 
-		{
-			if(vc.paramsCheck(sample))
-				ar.alertingFunc(1);
-			else
-				ar.alertingFunc(0);
+		    if(vm.validateDetails(sample)) 
+			    ar.alertingModule(1);	
+		    else 
+		    {
+			   if(vc.paramsCheck(sample))
+				   ar.alertingModule(1);
+			   else
+				   ar.alertingModule(0);
 		 
-		}
+		    }
 		}
 		
 		else
