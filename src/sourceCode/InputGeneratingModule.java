@@ -3,25 +3,18 @@ package sourceCode;
 
 
 public class InputGeneratingModule {
-    	public Sample[] getDetails(String patientId)
+    	public PatientVitals[] getDetails(String patientId)
     	{
-			Sample[] arr;
-    		arr = new Sample[1];
+	       PatientVitals[] arr = new PatientVitals[1];
     		
-			RandomValuesGeneratingModule r= new RandomValuesGeneratingModule();
-    		int spo2=(int)r.generateFun(50, 100);
-    		int hr=(int)r.generateFun(30, 254);
-			double temp= Math.round(r.generateFun(80, 130) * 100.0) /100.0;
+		RandomValuesGeneratingModule r= new RandomValuesGeneratingModule();
+    		int spo2=(int)r.generatingModule(30.0, 100.0);
+    		int hr=(int)r.generatingModule(20.0, 254.0);
+		double temp= Math.round(r.generatingModule(60, 150) * 100.0) /100.0;
         	
-        	String spo2_ = Integer.toString(spo2);
-        	String pulseRate = Integer.toString(hr);
-        	String temperature = Double.toString(temp);
-        	arr[0] = new Sample(patientId,spo2_,pulseRate,temperature);
-        	if(patientId!=null && spo2_!=null && pulseRate!=null && temperature!=null) 
-			     return arr;
-        	else       	
-        		return null;			
-			}
+        	arr[0] = new PatientVitals(patientId,spo2,hr,temp);
+        	return arr;		
+		}
 		
 
 
