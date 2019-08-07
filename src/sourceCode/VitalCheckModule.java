@@ -46,43 +46,46 @@ public class VitalCheckModule {
 		final int highPulseRateWarningLimit = 1;
 		final int highPulseRateCriticalLimit = 1;
 		final int pulseRateMachineError = 1;
+		int flag = 1;
 		
 		if( pulseRate >=50 && pulseRate <= 100 ) { 
 			
-			return pulseRateNormalLimit; 
+			flag = pulseRateNormalLimit; 
 			
 		}
 		
 		
 		
 		else if( pulseRate >=40 && pulseRate < 50 ){
-			return lowPulseRateWarningLimit; 
+			flag = lowPulseRateWarningLimit; 
 			
 		}
 		
 		
 		else if( pulseRate >=30 && pulseRate < 40) {
-			return lowPulseRateCriticalLimit; 
+			flag = lowPulseRateCriticalLimit; 
 			
 		}
 		
 		else if( pulseRate >100 && pulseRate < 120 ){
-			return highPulseRateWarningLimit; 
+			flag = highPulseRateWarningLimit; 
 			
 		}
 		
 		
 		else if( pulseRate >=120 && pulseRate < 254) {
-			return highPulseRateCriticalLimit; 
+			flag = highPulseRateCriticalLimit; 
 			
 		}
 		
 		
 		else
 		{
-			return pulseRateMachineError;
+			flag = pulseRateMachineError;
 		}	
 			
+		
+		return flag;
 		
 	}
 	
@@ -95,42 +98,46 @@ public class VitalCheckModule {
 		final int highTempratureWarningLimit = 1;
 		final int highTempratureCriticalLimit = 1;
 		final int tempratureMachineError = 1;
+		int flag = 1;
 		
 		if( tempratureF >=97.0 && tempratureF <= 99.00 ) { 
 			
-			return tempratureNormalLimit; 
+			flag = tempratureNormalLimit; 
 			
 		}
 		
 		
 		
 		else if( tempratureF >=95.00 && tempratureF < 97.00 ){
-			return lowTempratureWarningLimit; 
+			flag = lowTempratureWarningLimit; 
 			
 		}
 		
 		
 		else if( tempratureF >=93.00 && tempratureF < 95.00) {
-			return lowTempratureCriticalLimit; 
+			flag = lowTempratureCriticalLimit; 
 			
 		}
 		
 		else if( tempratureF >99.00 && tempratureF < 104.00 ){
-			return highTempratureWarningLimit; 
+			flag = highTempratureWarningLimit; 
 			
 		}
 		
 		
 		else if( tempratureF >=104.00 && tempratureF < 108.00) {
-			return highTempratureCriticalLimit; 
+			flag = highTempratureCriticalLimit; 
 			
 		}
 		
 		
 		else
 		   {
-			return tempratureMachineError;
+			flag = tempratureMachineError;
 		   }
+		
+		
+		return flag;
 		
 		
 	}
@@ -142,31 +149,34 @@ public class VitalCheckModule {
 		final int oxygenWarningLimit = 1;
 		final int oxygenCriticalLimit = 1;
 		final int oxygenMachineError = 1;
+		int flag = 0;
 		
 		if( oxygenConcentration >=91 && oxygenConcentration <= 100 ) { 
 			
-			return oxygenNormalLimit; 
+			flag = oxygenNormalLimit; 
 			
 		}
 		
 		
 		
 		else if( oxygenConcentration >=81 && oxygenConcentration < 91 ){
-			return oxygenWarningLimit; 
+			flag = oxygenWarningLimit; 
 			
 		}
 		
 		
 		else if( oxygenConcentration >=70 && oxygenConcentration < 81) {
-			return oxygenCriticalLimit; 
+			flag = oxygenCriticalLimit; 
 			
 		}
 		
 		
 		else
 		{
-			return oxygenMachineError;
+			flag = oxygenMachineError;
 		}	
+		
+		return flag;
 			
 		
 	}
